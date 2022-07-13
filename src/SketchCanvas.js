@@ -9,8 +9,8 @@ import ReactNative, {
   PanResponder,
   PixelRatio,
   Platform,
-  ViewPropTypes,
-  processColor
+  processColor,
+  ViewStyle
 } from 'react-native'
 import { requestPermissions } from './handlePermissions';
 
@@ -24,7 +24,7 @@ const SketchCanvasManager = NativeModules.RNSketchCanvasManager || {};
 
 class SketchCanvas extends React.Component {
   static propTypes = {
-    style: ViewPropTypes.style,
+    style: ViewStyle,
     strokeColor: PropTypes.string,
     strokeWidth: PropTypes.number,
     onPathsChange: PropTypes.func,
